@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitbucket Workspace PWA</title>
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0052CC">
+</head>
+<body>
+  <h1>Bitbucket Workspace</h1>
+  <p>Click below to open your Bitbucket workspace:</p>
+  <a href="https://bitbucket.org/discord-account-support-corporation/workspace/overview" target="_blank">
+    Open Workspace
+  </a>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker Registered'))
+        .catch(console.error);
+    }
+  </script>
+</body>
+</html>
